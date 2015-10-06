@@ -1,0 +1,13 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ .Title }} &dash; {{ .Site.Title }}</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
+    <!-- Prefetch WebFonts and scripts -->
+    <!-- Font: Raleway 400 -->
+    <link rel="prefetch" href="https://fonts.gstatic.com/s/raleway/v9/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2">
+    <!-- Font: Raleway 700 -->
+    <link rel="prefetch" href="https://fonts.gstatic.com/s/raleway/v9/JbtMzqLaYbbbCL9X6EvaIwzyDMXhdD8sAj6OAJTFsBI.woff2">
+    {{ partial "sharing_protocols.html" . }}
+</head>
