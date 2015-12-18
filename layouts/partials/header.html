@@ -1,14 +1,22 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ .Title }} &dash; {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-    <!-- Prefetch WebFonts -->
-    <!-- Assume modern Firefox/Chrome/Android and prefetch woff2 -->
-    <link rel="prefetch" href="{{ .Site.BaseURL }}fonts/Raleway/raleway-regular-webfont.woff2">
-    <link rel="prefetch" href="{{ .Site.BaseURL }}fonts/Raleway/raleway-bold-webfont.woff2">
-    <!-- Prefetch JavaScript -->
-    <link rel="prefetch" href="{{ .Site.BaseURL }}js/app.js">
-    <link rel="prefetch" href="{{ .Site.BaseURL }}js/lib/zepto.min.js">
-    {{ partial "sharing_protocols.html" . }}
-</head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            {{ if .Title }}
+                {{ .Title }} &dash; {{ .Site.Title }}
+            {{ else }}
+                {{ .Site.Title }}
+            {{ end }}</title>
+        <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+        <!-- Prefetch WebFonts :: Assume modern browser and prefetch woff2 -->
+        <!-- Chivo:900 -->
+        <link rel="prefetch" href="https://fonts.gstatic.com/s/chivo/v7/TX_hNweQrqAZr-ujaKg9pnYhjbSpvc47ee6xR_80Hnw.woff2">
+        <!-- Prefetch JavaScript -->
+        <link rel="prefetch" href="{{ .Site.BaseURL }}js/lib/zepto.min.js">
+        <link rel="prefetch" href="{{ .Site.BaseURL }}js/app.js">
+        {{ partial "sharing_protocols.html" . }}
+    </head>
+    <body>

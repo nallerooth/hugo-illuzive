@@ -1,8 +1,17 @@
 <div class="nav-bar">
     <nav>
         <div class="container">
+            <a class="site-title" href="/" title="NalleRooth.com">NalleRooth.com</a>
             <ul>
-                <li><a href="/" title=""></a></li>
+                <li>
+                    <a data-matches='^\/$|^\/post\/(?:[a-z0-9_#]+\/)*$' href="/" title="Articles">Articles</a>
+                </li>
+                <li>
+                    <a data-matches='^\/page\/projects\/(?:[a-z0-9_#]+\/)*$' href="/page/projects" title="Projects">Projects</a>
+                </li>
+                <li>
+                    <a data-matches='^\/page\/about\/?$' href="/page/about" title="About">About</a>
+                </li>
             </ul>
         </div>
     </nav>
