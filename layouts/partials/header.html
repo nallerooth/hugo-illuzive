@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>
-            {{ if .Title }}
-                {{ .Title }} &dash; {{ .Site.Title }}
-            {{ else }}
-                {{ .Site.Title }}
-            {{ end }}</title>
+        {{ .Hugo.Generator }}
+        {{ if eq .Title .Site.Title }}
+        <title>{{ .Site.Title }}</title>
+        {{ else }}
+        <title>{{ .Title }} &dash; {{ .Site.Title }}</title>
+        {{ end }}
         <link href='https://fonts.googleapis.com/css?family=Chivo:900|Open+Sans:300,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
         <!-- Prefetch WebFonts :: Assume modern browser and prefetch woff2 -->
