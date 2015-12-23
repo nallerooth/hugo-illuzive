@@ -9,13 +9,12 @@
             {{ else }}
                 {{ .Site.Title }}
             {{ end }}</title>
-        <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Chivo:900|Open+Sans:300,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
         <!-- Prefetch WebFonts :: Assume modern browser and prefetch woff2 -->
         <!-- Chivo:900 -->
         <link rel="prefetch" href="https://fonts.gstatic.com/s/chivo/v7/TX_hNweQrqAZr-ujaKg9pnYhjbSpvc47ee6xR_80Hnw.woff2">
         <!-- Prefetch JavaScript -->
-        <link rel="prefetch" href="{{ .Site.BaseURL }}js/lib/zepto.min.js">
         <link rel="prefetch" href="{{ .Site.BaseURL }}js/app.js">
         {{ partial "sharing_protocols.html" . }}
     </head>
