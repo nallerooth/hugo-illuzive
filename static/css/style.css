@@ -131,6 +131,12 @@ article footer a:hover {
     color: #333;
 }
 
+article .comments {
+    margin-top: 3em;
+    border-top: solid 1px #ccc;
+    padding-top: 2em;
+}
+
 .container {
     max-width: 760px;
     margin: 0 auto;
