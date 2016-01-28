@@ -173,7 +173,7 @@ article footer a:after {
     width: 0;
     height: 1px;
     background-color: #333;
-    transition: all ease-out .25s; 
+    transition: all ease-out .25s;
     transform: translateX(0);
 }
 
@@ -340,4 +340,20 @@ article .comments {
 .nav-bar footer a {
     text-decoration: none;
     color: #c90;
+}
+
+.archive-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.archive-nav li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 32%;
+    border: solid 1px #ccc;
+    box-sizing: border-box;
 }

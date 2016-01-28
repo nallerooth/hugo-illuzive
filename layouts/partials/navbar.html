@@ -12,13 +12,16 @@
         <nav>
             <ul>
                 <li>
-                    <a data-matches='^\/$|^\/post\/(?:[a-z0-9_#]+\/)*$' href="/" title="Articles">Articles</a>
+                    <a data-matches="^\/$|^\/post\/(?:[a-z0-9_#]+\/)*$" href="/" title="Articles">Articles</a>
                 </li>
                 <li>
-                    <a data-matches='^\/page\/projects\/(?:[a-z0-9_#]+\/)*$' href="/page/projects" title="Projects">Projects</a>
+                    <a data-matches="^\/[archive|tags|categories].*$" href="/archive">Archive</a>
                 </li>
                 <li>
-                    <a data-matches='^\/page\/about\/?$' href="/page/about" title="About">About</a>
+                    <a data-matches="^\/page\/projects\/(?:[a-z0-9_#]+\/)*$" href="/page/projects" title="Projects">Projects</a>
+                </li>
+                <li>
+                    <a data-matches="^\/page\/about\/?$" href="/page/about" title="About">About</a>
                 </li>
             </ul>
         </nav>
