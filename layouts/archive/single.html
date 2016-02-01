@@ -8,7 +8,7 @@
 				{{ range .Site.Pages.ByDate.Reverse }}
 					{{ if eq .Type "post" }}
 					<li>
-						<a href="/posts/{{ .Title | urlize }}">{{ .Title }}</a>
+						<a href="{{ .Permalink }}">{{ .Title }}</a>
 						<span class="post-meta"> - {{ .Date.Format "Mon, Jan 2, 2006" }}</span>
 					</li>
 					{{ end }}
