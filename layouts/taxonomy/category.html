@@ -4,12 +4,10 @@
     <div class="content">
         <div class="container">
             <article class="categories-list">
-                <h1>Content filed under: {{ .Title }}</h1>
-                <div class="article-body">
+                <h1 class="border-below"><span class="grey">Content filed under:</span> {{ .Title }}</h1>
                 {{ range $page := $data.Pages }}
                     {{ .Render "summary" }}
                 {{ end  }}
-                </div>
             </article>
         </div>
     </div>

@@ -19,10 +19,6 @@ body > footer {
     font-size: .8em;
 }
 
-body a {
-    font-weight: 400;
-}
-
 .content {
     padding: 50px 0 80px 300px;
     max-width: 960px;
@@ -30,8 +26,8 @@ body a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Chivo', Helvetica, Arial, sans-serif;
-    font-weight: 900;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-weight: 300;
     color: #333;
 }
 
@@ -52,19 +48,23 @@ article h1 {
     margin-bottom: .5em;
 }
 
+article h1 .grey {
+    color: #999;
+}
+
 article h2 {
     font-size: 1.4em;
-    margin-bottom: .4em;
+    margin: 2em 0 .4em;
 }
 
 article h3 {
     font-size: 1.2em;
-    margin-bottom: .3em;
+    margin: 1.8em 0 .3em;
 }
 
 article h4 {
     font-size: 1em;
-    margin-bottom: .2em;
+    margin: 1.6em 0 .2em;
 }
 
 article h5 {
@@ -103,8 +103,8 @@ article footer {
     margin-top: 1em;
 }
 
-article h2 {
-    margin-bottom: .25em;
+article strong {
+    font-weight: 500;
 }
 
 article .post-meta {
@@ -254,7 +254,6 @@ article .comments {
 
 .nav-bar .about strong {
     font-size: 1.2em;
-    font-weight: 700;
     text-shadow: 0 0 2px #c90;
 }
 
@@ -354,6 +353,15 @@ article .comments {
     margin: 0;
     padding: 0;
     width: 32%;
-    border: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
     box-sizing: border-box;
+}
+
+.archive-nav li a {
+    display: block;
+    text-align: center;
+}
+
+.border-below {
+    border-bottom: solid 1px #ccc;
 }
