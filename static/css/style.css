@@ -303,14 +303,14 @@ article .comments {
     left: 100%;
     top: 50%;
     width: 0;
-    border: solid 15px #c90;
+    border: solid 15px #333;
     margin-top: -15px;
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-top-color: transparent;
     transform: translateX(-15px);
-    opacity: 0;
     transition: all .5s ease-out;
+    z-index: -1;
 }
 
 .nav-bar li a:hover,
@@ -322,7 +322,21 @@ article .comments {
 
 .nav-bar li a.active:after {
     transform: translateX(0);
-    opacity: 1;
+    border-left-color: #c90;
+}
+
+.nav-bar ul:hover li a:after {
+    transform: translateX(-15px);
+}
+
+.nav-bar ul:hover li a.active {
+    background-color: #333;
+    color: #ccc;
+}
+
+.nav-bar ul:hover li a:hover {
+    background-color: #222;
+    color: #ccc;
 }
 
 .nav-bar > footer {
@@ -360,6 +374,15 @@ article .comments {
 .archive-nav li a {
     display: block;
     text-align: center;
+}
+
+.archive-list {
+    padding-left: 0;
+}
+
+.archive-list li {
+    list-style-type: circle;
+    list-style-position: inside;
 }
 
 .border-below {

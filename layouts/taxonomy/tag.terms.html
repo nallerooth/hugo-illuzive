@@ -7,7 +7,7 @@
                 {{ partial "archive_navigation.html" }}
                 <h1>{{ title $data.Plural }}</h1>
                 <div class="article-body">
-                    <ul>
+                    <ul class="archive-list">
                     {{ range $name, $value := .Data.Terms }}
                         {{ if len $name }}
                         <li>

@@ -1,12 +1,26 @@
-{{ $data := .Data }}
+{{ $pages := where .Data.Pages "Type" "page" }}
+{{ $posts := where .Data.Pages "Type" "post" }}
 {{ partial "header.html" . }}
     {{ partial "navbar.html" . }}
     <div class="content">
         <div class="container">
             <article class="categories-list">
                 <h1 class="border-below"><span class="grey">Content filed under:</span> {{ .Title }}</h1>
-                {{ range $page := $data.Pages }}
-                    {{ .Render "summary" }}
+                {{ if $pages }}
+                    <h2>Pages</h2>
+                    <ul class="article-body archive-list">
+                    {{ range $pages }}
+                        {{ .Render "li" }}
+                    {{ end }}
+                    </ul>
+                {{ end }}
+                {{ if $posts }}
+                    <h2>Articles</h2>
+                    <ul class="article-body archive-list">
+                    {{ range $posts }}
+                        {{ .Render "li" }}
+                    {{ end }}
+                    </ul>
                 {{ end  }}
             </article>
         </div>

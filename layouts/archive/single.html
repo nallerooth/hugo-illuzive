@@ -1,20 +1,30 @@
+{{ $pages := where .Site.Pages "Type" "page" }}
+{{ $posts := where .Site.Pages "Type" "post" }}
 {{ partial "header.html" . }}
     {{ partial "navbar.html" . }}
     <div class="content">
         <article>
             <div class="container article-body">
-            	{{ partial "archive_navigation.html" }}
+                {{ partial "archive_navigation.html" }}
                 <h1>History</h1>
-				{{ range .Site.Pages.ByDate.Reverse }}
-					{{ if eq .Type "post" }}
-					<li>
-						<a href="{{ .Permalink }}">{{ .Title }}</a>
-						<span class="post-meta"> - {{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-					</li>
-					{{ end }}
-				{{ end }}
-				</ul>
+                {{ if $pages }}
+                    <h2>Pages</h2>
+                    <ul class="article-body archive-list">
+                    {{ range $pages }}
+                        {{ .Render "li" }}
+                    {{ end }}
+                    </ul>
+                {{ end }}
+                {{ if $posts }}
+                    <h2>Articles</h2>
+                    <ul class="article-body archive-list">
+                    {{ range $posts }}
+                        {{ .Render "li" }}
+                    {{ end }}
+                    </ul>
+                {{ end  }}
             </div>
         </article>
     </div>
 {{ partial "footer.html" . }}
+
