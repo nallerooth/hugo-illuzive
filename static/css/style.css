@@ -99,6 +99,18 @@ article code {
     border: solid 1px #ddd;
 }
 
+pre {
+    background-color: #f0f0f0;
+    border: solid 1px #ddd;
+    padding: 1em 0;
+}
+
+article pre code {
+    background: none;
+    border: none;
+    color: inherit;
+}
+
 article footer {
     margin-top: 1em;
 }

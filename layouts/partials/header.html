@@ -10,7 +10,7 @@
         <title>{{ .Title }} &dash; {{ .Site.Title }}</title>
         {{ end }}
         <link href='https://fonts.googleapis.com/css?family=Roboto:300,500,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
         <link rel="alternate" type="application/xml" title="RSS Feed for {{ .Site.Title }}" href="/index.xml">
         <!-- Prefetch WebFonts :: Assume modern browser and prefetch woff2 -->
         <!-- Roboto 300, 500, 700-->
@@ -18,7 +18,7 @@
         <link rel="prefetch" href="https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUZBw1xU1rKptJj_0jans920.woff2">
         <link rel="prefetch" href="https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOJBw1xU1rKptJj_0jans920.woff2">
         <!-- Prefetch JavaScript -->
-        <link rel="prefetch" href="{{ .Site.BaseURL }}js/app.js">
+        <link rel="prefetch" href="/js/app.js">
         <link rel="shortcut icon" href="/img/favicon.ico">
         {{ partial "sharing_protocols.html" . }}
     </head>
