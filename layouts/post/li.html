@@ -1,5 +1,5 @@
 <li>
-    <a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}[ DRAFT ]{{end}}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title }} {{ if .Draft }}<span class="draft">[ DRAFT ]</span>{{end}}</a>
     <span class="post-meta">
         - {{ .Date.Format "Mon, Jan 2, 2006" }}
     </span>

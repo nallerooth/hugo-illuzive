@@ -1,3 +1,4 @@
+{{ $currentNode := . }}
 <div class="nav-bar">
     <div class="container">
         <a class="site-title" href="/" title="NalleRooth.com"><div>Nalle</div><div>Rooth<div class="rotate90"><span class="highlight">.</span>com</div></div></a>
@@ -11,18 +12,11 @@
         </div>
         <nav>
             <ul>
+            {{ range .Site.Menus.nav }}
                 <li>
-                    <a data-matches="^\/$|^\/post\/(?:[a-z0-9_#]+\/)*$" href="/" title="Articles">Articles</a>
+                    <a  class="{{ if (or ($currentNode.HasMenuCurrent "nav" .) ($currentNode.IsMenuCurrent "nav" .))}}active{{end}}" href="{{ .URL | safeURL }}">{{ .Name }}</a>
                 </li>
-                <li>
-                    <a data-matches="^\/[archive|tags|categories].*$" href="/archive">Archive</a>
-                </li>
-                <li>
-                    <a data-matches="^\/page\/projects\/(?:[a-z0-9_#]+\/)*$" href="/page/projects" title="Projects">Projects</a>
-                </li>
-                <li>
-                    <a data-matches="^\/page\/about\/?$" href="/page/about" title="About">About</a>
-                </li>
+            {{ end }}
             </ul>
         </nav>
         </div>

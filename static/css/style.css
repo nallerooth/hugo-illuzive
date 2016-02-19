@@ -199,10 +199,20 @@ article footer a:hover:after {
     width: 100%;
 }
 
+article a .draft {
+    color: #cc0000;
+}
+
 article .comments {
     margin-top: 3em;
     border-top: solid 1px #ccc;
     padding-top: 2em;
+}
+
+article .notice {
+    background-color: #ffeecc;
+    border: solid 1px #eeddaa;
+    padding: .5em;
 }
 
 .container {
