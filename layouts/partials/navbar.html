@@ -1,7 +1,7 @@
 {{ $currentNode := . }}
 <div class="nav-bar">
     <div class="container">
-        <a class="site-title" href="/" title="NalleRooth.com"><div>Nalle</div><div>Rooth<div class="rotate90"><span class="highlight">.</span>com</div></div></a>
+        <a class="site-title" href="/" title="NalleRooth.com"><div>Nalle</div><div class="mobile-highlight">Rooth<div class="rotate90"><span class="highlight">.</span>com</div></div></a>
         <div class="about">
             <p>Hi! <small class="right">My name is</small></p>
             <p class="right"><strong>Nalle Rooth</strong>,</p>
@@ -18,6 +18,17 @@
                 </li>
             {{ end }}
             </ul>
+            <div class="select-wrapper">
+                <select id="mobileMenu">
+                {{ range .Site.Menus.nav }}
+                    <option value="{{ .URL | safeURL }}"{{ if (or ($currentNode.HasMenuCurrent "nav" .) ($currentNode.IsMenuCurrent "nav" .))}} selected{{ end }}>{{ .Name }}</option>
+                {{ end }}
+                </select>
+                <div class="svg-wrapper">
+                    <svg class="arrow-down" width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><path d="M 96.00,96.00l-96.00,96.00l 256.00,256.00l 256.00-256.00l-96.00-96.00L 256.00,256.00L 96.00,96.00z"/></svg>
+                    <svg class="arrow-up" width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><path d="M 96.00,448.00l-96.00-96.00L 256.00,96.00l 256.00,256.00l-96.00,96.00L 256.00,288.00L 96.00,448.00z"/></svg>
+                </div>
+            </div>
         </nav>
         </div>
         <footer>
