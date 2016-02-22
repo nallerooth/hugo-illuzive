@@ -50,6 +50,7 @@ article header h1,
 article h1 {
     font-size: 1.8em;
     margin-bottom: .5em;
+    line-height: 1.1em;
 }
 
 article h1 .grey {
@@ -203,7 +204,7 @@ article footer a:hover:after {
     width: 100%;
 }
 
-article a .draft {
+article .draft {
     color: #cc0000;
 }
 
@@ -217,6 +218,13 @@ article .notice {
     background-color: #ffeecc;
     border: solid 1px #eeddaa;
     padding: .5em;
+}
+
+article ul ul,
+article ol ol,
+article ul ol,
+article ol ul {
+    margin-bottom: 1em;
 }
 
 .container {
@@ -449,10 +457,6 @@ article .notice {
         padding-left: 340px;
         margin-right: 40px;
     }
-
-    article h1 {
-        line-height: 1.1em;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -609,10 +613,6 @@ article .notice {
 
     .nav-bar ul {
         display: none;
-    }
-
-    article h1 {
-        line-height: 1.1em;
     }
 }
 
