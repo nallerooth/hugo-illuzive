@@ -204,6 +204,10 @@ article footer a:hover:after {
     width: 100%;
 }
 
+article .article-body {
+    padding-bottom: 2em;
+}
+
 article .draft {
     color: #cc0000;
 }
