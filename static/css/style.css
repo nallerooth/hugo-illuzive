@@ -624,4 +624,9 @@ article ol ul {
     .nav-bar select {
         width: 120px;
     }
+
+    article code {
+        display: block;
+        overflow: scroll;
+    }
 }
